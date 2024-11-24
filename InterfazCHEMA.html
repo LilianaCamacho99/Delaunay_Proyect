@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Triangulación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #c4c4c4;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 80%;
+            max-width: 1200px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .left-panel, .right-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .file-upload {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .file-upload input[type="file"] {
+            display: none;
+        }
+        .file-upload label {
+            padding: 10px 20px;
+            background: #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button {
+            padding: 15px;
+            background: #0044cc;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .button:hover {
+            background: #002a80;
+        }
+        .progress-bar {
+            margin-top: 20px;
+            width: 100%;
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar div {
+            width: 50%; /* Cambiar este valor dinámicamente */
+            height: 100%;
+            background: #4caf50;
+        }
+        .progress-text {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .result-image {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            width: 100%;
+            justify-content: center;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            background: #ddd;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Panel izquierdo -->
+        <div class="left-panel">
+            <div class="file-upload">
+                <label for="file">Seleccionar archivo</label>
+                <input type="file" id="file">
+            </div>
+            <button class="button">INICIAR TRIANGULACIÓN</button>
+            <div class="progress-bar">
+                <div></div>
+            </div>
+            <div class="progress-text">Progreso 50%</div>
+        </div>
+
+        <!-- Panel derecho -->
+        <div class="right-panel">
+            <img src="AcapulcoNODE.jpeg" alt="Resultado" class="result-image">
+            <div class="buttons">
+                <button>Descargar archivo</button>
+                <button>Volver a generar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
