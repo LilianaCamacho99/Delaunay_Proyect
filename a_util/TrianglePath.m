@@ -1,0 +1,1 @@
+trianglepath='/Users/kkey/Documents/MATLAB/MarineEMLab/Triangle/c_code/OS X/triangle'; 
